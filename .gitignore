@@ -1,0 +1,61 @@
+##==+====1====+====2====+====3====+====4====+====5====+====6====+====7====+====8
+##
+## FILE-NAME  :=  [[ 0COPY-DOT-gitignore ]]
+## FILE-PATH  :=  [[ (__DOCS_AND_REPOS__) .. /0DFPHD-850-SWDEV-IOS/ ]]
+##
+## NOTE: For me right now on this MBP17@HOME (DoubleWide), I am using
+## __DOCS_AND_REPOS__  :=  [[ ~/Documents/0NEWDOCS-20120516 ]]
+##
+## This is a/the project gitignore file - called literally ".gitignore".
+## I am in the process of trying to customize my git-based projects for
+## use with Xcode, as Xcode 4 has git native capabilities. There is also
+## something new (at least to me) that I've discovered, called the git
+## "attributes" file, again called literally ".gitattributes", which
+## finally gives one the ability to track but ignore (i.e: cache but
+##
+## [[ DFPHD :: SWDEV@HOME - IOS/XCODE HelloWorld :: 2012/07/05 ]]
+##
+##==+====1====+====2====+====3====+====4====+====5====+====6====+====7====+====8
+
+!.gitme
+!.gitconfig
+!.gitignore
+!.gitattributes
+
+!Makefile
+!makefile
+!GNUmakefile
+
+!build.xml
+!CMakeLists.txt
+
+##==+====1====+====2====+====3====+====4====+====5====+====6====+====7====+====8
+## ECLIPSE NOISE ...
+
+.project
+.cproject
+
+##==+====1====+====2====+====3====+====4====+====5====+====6====+====7====+====8
+
+# xcode noise
+build/*
+*.pbxuser
+*.mode1v3
+
+# old skool
+.svn/
+
+# osx noise
+.DS_Store
+
+*.swp
+*~
+
+.DS*
+._Trash*
+__MAC*
+
+*.[ao]
+*.so
+*.exe
+*.dylib

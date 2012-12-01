@@ -1,0 +1,86 @@
+##==+====1====+====2====+====3====+====4====+====5====+====6====+====7====+====8
+##
+##  FILE-NAME := [[ ".gitattributes" ]]
+##
+##  This is my best effort at a simple GIT "attributes" file that handles
+##  binary files properly. There is much information available out there
+##  regarding GIT "attributes" (SEE ALSO - below), and there seems to be
+##  alot of text- and binary-file handling settings within GIT that should
+##  be defaulted but are not. And so my attempt here to reinvent the
+##  attributed wheel - please forgive if it is laughably incorrect or
+##  more likely superseded by the correct GIT defaults. Hopefully, my
+##  GIT attributes listed/used here do not munch a repo too badly.
+##
+##  This main text file should be COPIED in to the top-level of a
+##  git-repo as a file named literally ".gitattributes".
+##
+##  SEE ALSO:
+##     (1) man git-add, man gitattributes
+##
+##  [[ DFPHD :: SWDEV@HOME - GIT/XCODE/IOS Development :: 2012/07/05 ]]
+##
+##==+====1====+====2====+====3====+====4====+====5====+====6====+====7====+====8
+
+* text=auto
+
+## i think this says: pdf files are not managed as text files
+*.pdf -text
+
+[attr]binary -crlf -diff -merge
+
+*.jpg -crlf -diff -merge
+*.jpeg binary
+
+## .gitattributes
+*.pbxproj -crlf -diff -merge
+
+*.doc -crlf -diff -merge
+*.docx -crlf -diff -merge
+
+*.ppt -crlf -diff -merge
+*.pptx -crlf -diff -merge
+
+*.xls -crlf -diff -merge
+*.xlsx -crlf -diff -merge
+
+## This line in .gitattributes in-some-sense (i.e: the Git sense) treats
+## your Xcode project file (*.pbxproj) as a binary file. More specifically,
+## it prevents Git from trying to fix newlines in the *.pbxproj file. it
+## also prevents Git from showing the *.pbxproj file in diffs, it also
+## excludes it from merges. Note that you will still see it shown as a
+## conflict in merges, although the file won't have changed. Simply
+## commit it and things should be good.
+
+##==+====1====+====2====+====3====+====4====+====5====+====6====+====7====+====8
+
+## If you want to interoperate with a source code management system that enforces
+## end-of-line normalization, or you simply want all text files in your repository to be
+## normalized, you should instead set the text attribute to "auto" for all files.
+
+## *       text=auto
+
+## This ensures that all files that git considers to be text will have normalized (LF) line
+## endings in the repository. The core.eol configuration variable controls which line
+## endings git will use for normalized files in your working directory; the default is to
+## use the native line ending for your platform, or CRLF if core.autocrlf is set.
+
+## Note:
+
+## When text=auto normalization is enabled in an existing repository, any text files
+## containing CRLFs should be normalized. If they are not they will be normalized the
+## next time someone tries to change them, causing unfortunate misattribution. From a
+## clean working directory:
+
+## $ echo "* text=auto" >>.gitattributes
+## $ rm .git/index     # Remove the index to force git to
+## $ git reset         # re-scan the working directory
+## $ git status        # Show files that will be normalized
+## $ git add -u
+## $ git add .gitattributes
+## $ git commit -m "Introduce end-of-line normalization"
+
+## If any files that should not be normalized show up in git status, unset their text
+## attribute before running git add -u:
+## manual.pdf      -text
+
+##==+====1====+====2====+====3====+====4====+====5====+====6====+====7====+====8

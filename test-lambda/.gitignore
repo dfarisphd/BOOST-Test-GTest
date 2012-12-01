@@ -1,0 +1,6 @@
+!.gitignore
+!Makefile
+!boost-test-lambda.cpp
+
+boost-test-lambda*
+boost-test-lambda.o

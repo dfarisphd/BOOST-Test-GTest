@@ -1,7 +1,7 @@
 ##==+====1====+====2====+====3====+====4====+====5====+====6====+====7====+====8
 ##
-## FILE-NAME  :=  [[ 0COPY-DOT-gitignore ]]
-## FILE-PATH  :=  [[ (__DOCS_AND_REPOS__) .. /0DFPHD-850-SWDEV-IOS/ ]]
+## FILE-NAME := [[ ".gitignore" ]]
+## FILE-PATH := [[ "/Users/bueller/Dropbox/DFPHD-800-SWDEV/800-SWDEV-BOOST" ]]
 ##
 ## NOTE: For me right now on this MBP17@HOME (DoubleWide), I am using
 ## __DOCS_AND_REPOS__  :=  [[ ~/Documents/0NEWDOCS-20120516 ]]
@@ -28,6 +28,15 @@
 
 !build.xml
 !CMakeLists.txt
+
+0bak/
+!0bak/boost.checksums
+
+## -r--r--r--@ 1 bueller  staff  54421709 May 20 14:12 boost_1_52_0.tar.bz2
+## -r--r--r--@ 1 bueller  staff  55765258 May 20 13:06 boost_1_53_0.tar.bz2
+
+0bak/boost_1_52_0.tar.bz2
+0bak/boost_1_53_0.tar.bz2
 
 ##==+====1====+====2====+====3====+====4====+====5====+====6====+====7====+====8
 ## ECLIPSE NOISE ...

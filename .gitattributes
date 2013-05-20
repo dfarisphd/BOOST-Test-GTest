@@ -1,6 +1,7 @@
 ##==+====1====+====2====+====3====+====4====+====5====+====6====+====7====+====8
 ##
 ##  FILE-NAME := [[ ".gitattributes" ]]
+##  FILE-PATH := [[ "/Users/bueller/Dropbox/DFPHD-800-SWDEV/800-SWDEV-BOOST" ]]
 ##
 ##  This is my best effort at a simple GIT "attributes" file that handles
 ##  binary files properly. There is much information available out there
